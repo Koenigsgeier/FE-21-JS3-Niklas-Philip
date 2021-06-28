@@ -15,18 +15,32 @@ function GetGrade(points) {
 }
 
 var i = 0;
+
+const CheckGrammatic = (grade) => {
+    switch(grade) {
+        case "F":
+        case "A":
+            return "an";
+            break;
+        default:
+            return "a";
+            break;
+    }
+}
+
 for (let points of student_points) {
     let grade = GetGrade(points);
     let name = student_names[i];
-    switch (grade) {
-        case "F": 
-        case "A":
-            document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got an <b>${grade}</b>.<br>`;
-            break;
-        default: 
-            document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got a <b>${grade}</b>.<br>`;
-            break;
-    }
+    document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got ${CheckGrammatic(grade)} <b>${grade}</b>.<br>`;
+    // switch (grade) {
+    //     case "F": 
+    //     case "A":
+    //         document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got an <b>${grade}</b>.<br>`;
+    //         break;
+    //     default: 
+    //         document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got a <b>${grade}</b>.<br>`;
+    //         break;
+    // }
     // sum
     sum_points += points;
     i++;
@@ -35,13 +49,4 @@ for (let points of student_points) {
 
 
 var average_grade = GetGrade(sum_points / student_points.length);
-switch (average_grade) {
-    case "F": 
-    case "A":
-        document.getElementsByTagName("p")[0].innerHTML += `<br>With ${sum_points / student_points.length} points the average class grade is an <strong>${average_grade}</strong>.`;
-        break;
-    default:
-        document.getElementsByTagName("p")[0].innerHTML += `<br>With ${sum_points / student_points.length} points the average class grade is a <strong>${average_grade}</strong>.`;
-        break;
-
-}
+document.getElementsByTagName("p")[0].innerHTML += `<br>With ${sum_points / student_points.length} points the average class grade is ${CheckGrammatic(average_grade)} <strong>${average_grade}</strong>.`;
