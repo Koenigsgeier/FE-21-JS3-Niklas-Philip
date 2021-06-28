@@ -38,6 +38,6 @@ switch (average_grade) {
         break;
     default:
         document.getElementsByTagName("p")[0].innerHTML += `<br>With ${sum_points / student_points.length} points the average grade is a <strong>${average_grade}</strong>.`;
-        break
+        break;
 
 }

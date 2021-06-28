@@ -8,7 +8,7 @@
     padding: 1rem;
 }
 
-.fizzbuz {
+.fizzbuz, .starloop {
     margin: 0 auto;
     text-align: center;
 }
