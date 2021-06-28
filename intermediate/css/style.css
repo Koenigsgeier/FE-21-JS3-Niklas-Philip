@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #test {
     margin: 0 auto;
     padding: 1rem;
@@ -6,4 +11,10 @@
 .fizzbuz {
     margin: 0 auto;
     text-align: center;
+}
+
+
+h2 {
+    margin: 0;
+    padding: 0.2rem;
 }
