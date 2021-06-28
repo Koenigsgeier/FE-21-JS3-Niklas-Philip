@@ -33,16 +33,6 @@ for (let points of student_points) {
     let grade = GetGrade(points);
     let name = student_names[i];
     document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got ${CheckGrammatic(grade)} <b>${grade}</b>.<br>`;
-    // switch (grade) {
-    //     case "F": 
-    //     case "A":
-    //         document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got an <b>${grade}</b>.<br>`;
-    //         break;
-    //     default: 
-    //         document.getElementsByTagName("p")[0].innerHTML += `With ${points} points ${name} got a <b>${grade}</b>.<br>`;
-    //         break;
-    // }
-    // sum
     sum_points += points;
     i++;
     
