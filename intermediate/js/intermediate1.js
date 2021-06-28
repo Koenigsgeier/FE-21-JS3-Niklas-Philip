@@ -1,11 +1,4 @@
 // ex 1 | Compare two numbers
-
-document.getElementsByTagName("p")[0].innerHTML = "The student grades are:<br>";
-
-var student_points = [76,85,65,93,81];
-var student_names = ["Martin", "Thomas" ," Klaus", "Maria", "David"];
-
-var sum_points = 0;
 function GetGrade(points) {
     if (points < 60) return "F";
     else if (points < 70) return "D";
@@ -13,8 +6,6 @@ function GetGrade(points) {
     else if (points < 90) return "B";
     else return "A";
 }
-
-var i = 0;
 
 const CheckGrammatic = (grade) => {
     switch(grade) {
@@ -27,6 +18,16 @@ const CheckGrammatic = (grade) => {
             break;
     }
 }
+
+
+
+document.getElementsByTagName("p")[0].innerHTML = "The students grades are:<br>";
+
+var student_points = [76,85,65,93,81];
+var student_names = ["Martin", "Thomas" ," Klaus", "Maria", "David"];
+
+var sum_points = 0;
+var i = 0;
 
 for (let points of student_points) {
     let grade = GetGrade(points);
